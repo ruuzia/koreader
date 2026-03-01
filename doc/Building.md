@@ -131,7 +131,7 @@ brew install autoconf automake bash binutils cmake coreutils findutils \
     gettext gnu-getopt libtool make meson nasm ninja pkg-config util-linux
 ```
 
-You will also have to ensure Homebrew's findutils, gnu-getopt, make & util-linux are in your path, e.g., via
+You will also have to ensure Homebrew's findutils, gnu-getopt, make & util-linux are in your PATH. However, binutils should **not** be added explicitly to your PATH, so as to not override MacOS toolchain utilities. Example:
 ```
 export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$(brew --prefix)/opt/gnu-getopt/bin:$(brew --prefix)/opt/make/libexec/gnubin:$(brew --prefix)/opt/util-linux/bin:${PATH}"
 ```
